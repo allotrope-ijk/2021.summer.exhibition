@@ -8,8 +8,7 @@ const scene = new Scene(engine);
 scene.createDefaultCamera(true);
 scene.createDefaultLight(true);
 
-const filePrefix = "https://allotropeijk.azureedge.net/2021summerexhibit/";
-// const filePrefix = "resources/";
+const filePrefix = "https://allotropeijk.blob.core.windows.net/2021summerexhibit/";
 SceneLoader.ImportMeshAsync(null, filePrefix, "room.01.glb", scene).then((meshData) => {
     console.log("model loaded");
     scene.createDefaultXRExperienceAsync({ floorMeshes: meshData.meshes }).then((xr) => {
